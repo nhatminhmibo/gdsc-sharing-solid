@@ -1,2 +1,3 @@
-Phần code bị disable chính là phần code vi phạm 1 trong 5 nguyên tắc của SOLID, và phần code còn còn lại thỏa mãn nguyên tắc SOLID.
-Bắt đầu phần code vi phạm hay phần code thỏa mãn nguyên tắc SOLID đều có chú thích phần nào vi phạm và cách sửa như thế nào.
+- Trong repo này có 5 thư mục ứng với 5 tính chất của SOLID
+- Mỗi thư mục này có 2 thư mục nhỏ là "unsatisfactory" - chứa code không thỏa tính chất đó, và thư mục "satisfy" - chứa code được sửa lại từ code trong "unsatisfactory" giúp thỏa mãn tính chất đó
+- Trước mỗi file code đều có chú thích về code đó sẽ làm những gì
