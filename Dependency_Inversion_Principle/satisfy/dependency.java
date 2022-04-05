@@ -23,7 +23,7 @@ class Animal{
     } 
 }
 
-class SaveToMySQL implements SaveOptionInterface {
+class SaveToPosgreSQL implements SaveOptionInterface {
 	public void Save(Animal animal) {
         //logic for this
         System.out.println("save to MySQL successfully");
@@ -37,6 +37,6 @@ interface SaveOptionInterface {
 public class dependency {
     public static void main(String[] args) {
         Animal animal = new Animal("chocco", 3, 6);
-        animal.Save(new SaveToMySQL());
+        animal.Save(new SaveToPosgreSQL());
     }
 }

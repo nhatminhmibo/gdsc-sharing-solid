@@ -13,20 +13,15 @@ class Duck {
     }
 }
 
-class Person {
-    public boolean SqueezeDuck(RubberDuck duck) {
-        return false;
-        //return true;
-    }
-}
-
 class RubberDuck implements QuackableInterface {
 	public boolean CanQuack() { 
-		Person person = new Person();
-		if (person.SqueezeDuck(this)) {
+		boolean SomeoneSqueezeDuck = true;
+
+		if (SomeoneSqueezeDuck) {
 			System.out.println("quackkkkkkkk");
             return true;
 		}
+        
 		System.out.println("can't quackkkkkkkkkk");
         return false;
     }

@@ -9,7 +9,6 @@ package Liskov_Substitution_Principle.unsatisfactory;
 //Tuy nhiên con vịt nào mà chả quack được, 
 //đó là điều hiểu nhiên và việc class RubberDuck overide method CanQuack() đã vi phạm tính chất Liskov
 
-
 class Duck {
     //some attribute
     public boolean CanQuack(Duck duck) {
@@ -18,20 +17,15 @@ class Duck {
     }
 }
 
-class Person {
-    public boolean SqueezeDuck(RubberDuck duck) {
-        return false;
-        //return true;
-    }
-}
-
 class RubberDuck extends Duck {
     public boolean CanQuack(Duck duck) {
-        Person person = new Person();
-		if (person.SqueezeDuck(this)) {
+        boolean SomeoneSqueezeDuck = true;
+
+		if (SomeoneSqueezeDuck) {
 			System.out.println("quackkkkkkkk");
             return true;
 		}
+        
 		System.out.println("can't quackkkkkkkkkk");
         return false;
     }

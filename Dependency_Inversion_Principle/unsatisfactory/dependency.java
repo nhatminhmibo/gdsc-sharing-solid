@@ -18,15 +18,15 @@ class Animal{
 	}
 
     public void Save() {
-        SaveToMySQL saveToMySQL = new SaveToMySQL(this);
+        SaveToPosgreSQL saveToMySQL = new SaveToPosgreSQL(this);
         saveToMySQL.Save();
     } 
 }
 
-class SaveToMySQL {
+class SaveToPosgreSQL {
     Animal animal;
 
-    public SaveToMySQL(Animal animal) {
+    public SaveToPosgreSQL(Animal animal) {
         this.animal = animal;
     }
 

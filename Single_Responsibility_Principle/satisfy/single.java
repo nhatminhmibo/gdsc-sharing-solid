@@ -4,39 +4,47 @@ package Single_Responsibility_Principle.satisfy;
 //mỗi class chỉ chịu trách nhiệm cho 1 nhiệm vụ cụ thể như hình bên trái
 class Animal{
 	String name;
-	float age;
+	int age;
 	float weight;
 
-	public Animal (String name, float age, float weight) {
+	public Animal (String name, int age, float weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
     }
+}
 
-    public void PrintInfo() {
-        System.out.println("name: " + name + ", age: " + age + ", weight: " + weight);
+class Eating {
+    Animal animal;
+
+    public Eating(Animal animal) {
+        this.animal = animal;
+    }
+	public void Eat() {
+        System.out.println("eating");
     }
 }
 
-class Service {
+class Bathing {
     Animal animal;
 
-    public Service(Animal animal) {
+    public Bathing(Animal animal) {
         this.animal = animal;
     }
-	public void UseService() {
-        //logic with the service animal uses
-        System.out.println("Use Service");
+	public void TakeBath() {
+        System.out.println("bathing");
     }
 }
 
 public class single {
     public static void main(String[] args) {
         Animal animal = new Animal("kichi",2,5);
-        animal.PrintInfo();
 
-        Service service = new Service(animal);
-        service.UseService();
+        Eating activity1 = new Eating(animal);
+        activity1.Eat();
+
+        Bathing activity2 = new Bathing(animal);
+        activity2.TakeBath();
     }
 }
 
