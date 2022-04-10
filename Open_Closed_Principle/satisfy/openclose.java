@@ -17,10 +17,10 @@ class Animal{
 	}
 }
 
-class AnimalService {
+class UseAnimalService {
     Animal animal;
 
-    public AnimalService(Animal animal) {
+    public UseAnimalService(Animal animal) {
         this.animal = animal;
     }
 
@@ -57,7 +57,7 @@ class InitializeService {
                 this.animalServiceInterface = new VaccinationService();
             } else if (type == "deworming") {
                 this.animalServiceInterface = new DewormingService();
-            } 
+            }
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -70,7 +70,7 @@ public class openclose {
     public static void main (String[] args) {
         Animal animal = new Animal("mocha", 4, 6);
 
-        AnimalService service = new AnimalService(animal);
+        UseAnimalService service = new UseAnimalService(animal);
         service.UseService("deworming");
     }
 }

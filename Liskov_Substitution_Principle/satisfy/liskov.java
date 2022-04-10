@@ -13,6 +13,10 @@ class Duck {
     }
 }
 
+interface QuackableInterface {
+	public boolean CanQuack();
+}
+
 class RubberDuck implements QuackableInterface {
 	public boolean CanQuack() { 
 		boolean SomeoneSqueezeDuck = true;
@@ -25,10 +29,6 @@ class RubberDuck implements QuackableInterface {
 		System.out.println("can't quackkkkkkkkkk");
         return false;
     }
-}
-
-interface QuackableInterface {
-	public boolean CanQuack();
 }
 
 public class liskov {

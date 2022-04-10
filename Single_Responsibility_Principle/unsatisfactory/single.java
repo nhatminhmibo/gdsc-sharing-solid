@@ -16,6 +16,7 @@ class Animal{
 	public void Eating() {
         System.out.println(name + " is eating");
     }
+    
 	public void Bathing() {
         System.out.println(name + " is taking bath");
     }

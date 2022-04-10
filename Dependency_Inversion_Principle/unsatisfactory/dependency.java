@@ -18,8 +18,8 @@ class Animal{
 	}
 
     public void Save() {
-        SaveToPosgreSQL saveToMySQL = new SaveToPosgreSQL(this);
-        saveToMySQL.Save();
+        SaveToPosgreSQL saveToPosgreSQL = new SaveToPosgreSQL(this);
+        saveToPosgreSQL.Save();
     } 
 }
 
@@ -35,6 +35,8 @@ class SaveToPosgreSQL {
         System.out.println("save to MySQL successfully");
     }
 }
+
+//class SaveToMySQL {}
 
 public class dependency {
     public static void main(String[] args) {

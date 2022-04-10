@@ -16,44 +16,42 @@ class Animal{
         this.age = age;
         this.weight = weight;
 	}
-}  
+} 
 
 class AnimalService {
-    Animal animal;
-
-    public AnimalService(Animal animal) {
-        this.animal = animal;
+    public void Vaccinating(Animal animal) {
+            //logic for "tiêm vắc xin"
+            System.out.println("Vaccinating");
     }
 
-    public void UseService(String type) {
-        if (type == "vaccinate") {
-            VaccinationService vaccination = new VaccinationService();
-            vaccination.UseService(animal);
-        } else if (type == "deworming") {
-            DewormingService deworming = new DewormingService();
-            deworming.UseService(animal);
-        } 
-    }
-}
-
-class VaccinationService {
-	public void UseService(Animal animal) {
-        //logic for "tiêm vắc xin"
-        System.out.println("Vaccinating");
-    }
-}
-
-class DewormingService {
-	public void UseService(Animal animal) {
+    public void Deworming(Animal animal) {
         //logic for "tẩy giun"
         System.out.println("Deworming");
     }
 }
+
+class UseAnimalService {
+    AnimalService animalService;
+    Animal animal;
+
+    public UseAnimalService(Animal animal) {
+        this.animal = animal;
+    } 
+
+    public void UseService(String type) {
+        if (type == "vaccinate") {
+            animalService.Vaccinating(this.animal);
+        } else if (type == "deworming") {
+            animalService.Deworming(this.animal);
+        }
+    }
+}
+
 public class openclose {
     public static void main(String[] args) {
         Animal animal = new Animal("gooooo", 1, 4);
 
-        AnimalService service = new AnimalService(animal);
+        UseAnimalService service = new UseAnimalService(animal);
         service.UseService("vaccinate");
     }
 }
