@@ -1,7 +1,7 @@
 package Single_Responsibility_Principle.unsatisfactory; 
 
 //Ban đầu, ta có 1 class Animal với các thuộc tính và phương thức như bên dưới.
-//Single responsibillity principle khuyến khích việc 1 class chi nên chứa 1 phương thức, 1 hành động hay 1 nhiệm vụ.
+//Single responsibillity principle khuyến khích việc 1 class chi nên thực hiện 1 hành động hay 1 nhiệm vụ cụ thể.
 class Animal{
 	private String name;
 	private int age;
